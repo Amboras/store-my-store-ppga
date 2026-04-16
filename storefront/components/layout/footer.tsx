@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { Twitter } from 'lucide-react'
 import { clearConsent } from '@/lib/cookie-consent'
 import { usePolicies } from '@/hooks/use-policies'
 
@@ -105,6 +106,15 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Store. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Twitter className="h-4 w-4" />
+            </a>
             <button
               onClick={() => {
                 clearConsent()
